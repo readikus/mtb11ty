@@ -1,0 +1,26 @@
+---
+layout: layouts/home.njk
+eleventyNavigation:
+  key: Home
+  order: 1
+---
+
+<h1>A currated collection of content related to training for getting more out of mountain biking</h1>
+
+<p>The key concepts:</p>
+
+<ul>
+  <li>Complete basics of machine learning</li>
+  <li>Loading data files (CSVs) in python</li>
+  <li>Manipulating CSVs in python</li>
+  <li>Your first models - <a href="https://www.kaggle.com/alexisbcook/titanic-tutorial">the Kaggle's Titanic problem</a></li>
+</ul>
+
+
+<h1>Latest Posts</h1>
+
+{% set postslist = collections.posts | head(-3) %}
+{% set postslistCounter = collections.posts | length %}
+{% include "postslist.njk" %}
+
+<p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
